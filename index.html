@@ -9,11 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/ad5c36405b.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
 
 </head>
 <body>
+
+    <div class="theme-picker-container">
+        <p class="theme">Pick a theme: </p>
+        <form class="theme-picker" action="">
+            <fieldset>
+                
+                <label for="default">
+                <input type="radio" name="theme" id="default" checked>
+                <i class="fa-solid fa-calculator"></i></label>
+    
+                <label for="ios">
+                <input type="radio" name="theme" id="ios">
+                <i class="fa-brands fa-apple"></i></label>
+    
+                <label for="android">
+                <input type="radio" name="theme" id="android">
+                <i class="fa-brands fa-android"></i></label>
+    
+                <label for="space">
+                <input type="radio" name="theme" id="space">
+                <i class="fa-solid fa-rocket"></i></label>
+
+                <label for="windows">
+                    <input type="radio" name="theme" id="windows">
+                    <i class="fa-brands fa-windows"></i></label>
+
+                
+            </fieldset>
+        </form>
+    </div>
+    
 
 
     <div class="container">
@@ -23,16 +56,16 @@
                     <input type="text" name="display">
                 </div>
                 <div>
-                    <input type="button" value="AC" onclick="display.value = '' " class="operator">
-                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
-                    <input type="button" value="." onclick="display.value += '.' " class="operator">
-                    <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                    <input type="button" value="AC" onclick="display.value = '' " class="functions">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="functions">
+                    <input type="button" value="%" onclick="display.value += '%' " class="functions">
+                    <input type="button" value="÷" onclick="display.value += '/' " class="operator">
                 </div>
                 <div>
                     <input type="button" value="7" onclick="display.value += '7' ">
                     <input type="button" value="8" onclick="display.value += '8' ">
                     <input type="button" value="9" onclick="display.value += '9' ">
-                    <input type="button" value="*" onclick="display.value += '*' " class="operator">
+                    <input type="button" value="x" onclick="display.value += '*' " class="operator">
                 </div>
                 <div>
                     <input type="button" value="4" onclick="display.value += '4' ">
@@ -47,9 +80,9 @@
                     <input type="button" value="+" onclick="display.value += '+' " class="operator">
                 </div>
                 <div>
-                    <input type="button" value="00" onclick="display.value += '00' ">
-                    <input type="button" value="0" onclick="display.value += '0' ">
-                    <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)" >
+                    <input type="button" class="zero" value="0" onclick="display.value += '0' ">
+                    <input type="button" value="." onclick="display.value += '.' ">
+                    <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)">
                 </div>
             </form>
         </div>
